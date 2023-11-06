@@ -1,24 +1,45 @@
 @charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+/* font settings */
 @font-face {
   font-family: "Montserrat";
   src: "Montserrat.woff2";
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+/*set font scale 100% for smaller screens*/
 html {
-  font-size: 100%;
+	font-size: 100%;
+	transition: all 1s ease;
 }
-/*16px*/
+
+* { /*universal reset*/
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* mobile first */
 body {
-  background: white;
+  background: #33B4FF;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  color: #000000;
+  color: white;
 }
+
+/*16px*/
 p {
   margin-bottom: 1rem;
 }
+
 button {
   background-color: #ffd700;
   /* Choose your desired background color */
@@ -78,28 +99,8 @@ small,
   font-size: 0.8rem;
 }
 
-/* CSS Document */
-* {
-  /*universal reset*/
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
-/* mobile first */
-body {
-  background: #33B4FF;
-  color: white;
-}
-
 /* Presentational stuff */
 h1 {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
@@ -305,13 +306,6 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-.row h1 {
-  text-align: center;
-  /* Center the "Alumni in the News" heading */
-  margin-bottom: 0px;
-  /* Add spacing below the heading */
 }
 
 .row .third {
