@@ -1,126 +1,209 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
     <!--titles are important for SEO-->
-<title>Yale School of Art</title>
-<!--    google fonts code
--->
+    <title>Yale School of Art</title>
+    <!--    google fonts code
+      -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap" rel="stylesheet">
-   <!--this helps make the page responsive-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+    <!--this helps make the page responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- <!--link to stylesheet-->   
-<link href="css/style.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-   <section id="header">
-       <!--the logo will go here-->
-   <h1><a href="#">Yale School of Art</a></h1>
-       
-       <!--the navigation-->
-       <nav>
-       <ul>
-                 <li> <a href="#">About</a></li>   
-                 <li> <a href="#">Students</a></li>   
-                 <li> <a href="#">Academics</a></li>
-           <li> <a href="#">Contact</a></li>   
-    
-           
-           </ul>
-       
-       </nav>
- 
-
-    </section> 
-   <div id="hero"><h1>Important Headline</h1></div>
-     <section id="main">
-<div class="container">
-    <div class="row">
-        <div class="half"><h3>Award Winning Faculty</h3>
-        <img src="img/prof.jpg" alt="professor"> 
+    <!--link to stylesheet-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <section id="header">
+      <!--the logo will go here-->
+      <h1><a href="#">Yale School of Art</a></h1>
+      <!--the navigation-->
+      <nav>
+        <ul>
+					<li><a href="#">Academics</a></li>
+					<li><a href="#">Admissions</a></li>
+					<li><a href="#">Student Life</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">News & Events</a></li>
+					<li><input>Search</input></li>
+					<li id="hamburger" class="nav-item">
+							<span class="hamburger-icon" aria-expanded="false">&#8801;
+							</span>
+					</li>
+        </ul>
+				<ul class="dropdown-menu" aria-expanded="true">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Why YSoA</a></li>
+						<li><a href="#">Financial Aid</a></li>
+						<li><a href="#">Alumni</a></li>
+						<li><a href="#">Calendar</a></li>
+						<li><a href="#">Faculty</a></li>
+						<li><a href="#">After YSoA</a></li>
+						<li><a href="#">Our Work</a></li>
+						<li><a href="#">Contact Us</a></li>
+				</ul>
+      </nav>
+    </section>
+		<script>
+				const hamburgerIcon = document.querySelector('.hamburger-icon');
+				const dropdownMenu = document.querySelector('.dropdown-menu');
+				function toggleDropdown() {
+						dropdownMenu.classList.toggle('show');
+				}
+				hamburgerIcon.addEventListener('click', toggleDropdown);
+				document.addEventListener('click', function (event) {
+						if (!hamburgerIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+								dropdownMenu.classList.remove('show');
+						}
+				});
+		</script>
+    <div id="hero">
+      <h1>Yale School of art</h1>
+			<h2 class="desktop-only">Innovative Expression. Mastery of Craft.</h2>
+    </div>
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="full open-house">
+							<h3>Undergraduate Open House</h3>
+							<p>Prospective students: come one, come all!</p>
+							<p>In-person campus tours</p>
+							<p><a href="#" class="more">Sunday, October 22</a></p>
+          </div>
+				</div>
+				<div class="row">
+          <div class="half vertical-spread">
+						<h3>Contemporary Art Exhibition - Fall Showcase</h3>
+						<p>November 20, 2023</br>6:00 PM - 9:00 PM</p>
+						<p>Nueva Collections Gallery</br>2539 Horvath Ulica, New Haven, Connecticut 33259</p>
+						<button class="call-to-action-button">learn more</button>
+          </div>
+          <div class="half">
+            <img src="img/eight-women.jpg" alt="eight seated women">
+          </div>
+				</div>
+				<div class="row">
+          <div class="full">
+						<div id="slider" class="slider">
+							<ul>
+								<li>
+									<div class="slider-container slide1">
+										<h4>The Secret Lives of Pickles</h4>
+									<div>
+								</li>
+								<li>
+									<div class="slider-container slide2">
+										<h4>Abstract Algebra: A Soap Opera of Expressions</h4>
+									</div>
+								</li>
+								<li>
+									<div class="slider-container slide3">
+										<h4>Potato Salad at Midnight</h4>
+									</div>
+								</li>
+								<li>
+									<div class="slider-container slide4">
+										<h4>Chaos in a Blender</h4>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+          <div class="half">
+            <h3>Award Winning Faculty</h3>
+            <img src="img/prof.jpg" alt="professor">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil illum, molestias velit adipisicing elit. Quasi vel aut mollitia.</p>
             <a href="#" class="more">Read More</a>
+          </div>
+          <div class="half">
+            <h3>World Class Facilities</h3>
+            <img src="img/studio.jpg" alt="studio">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil illum, molestias velit. consectetur adipisicing elit. Quasi vel aut mollitia.</p>
+            <a href="#" class="more">Read More</a>
+          </div>
         </div>
-        <div class="half"><h3>World Class Facilities</h3>
-        <img src="img/studio.jpg" alt="studio">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil illum, molestias velit. consectetur adipisicing elit. Quasi vel aut mollitia.</p>
-        <a href="#" class="more">Read More</a></div>
-    </div>
-    
-    <div class="row">
-        <div class="third"><h4>Housing</h4>
+        <div class="row">
+          <div class="third">
+            <h4>Housing</h4>
             <img src="img/studio.jpg" alt="studio">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
             <a href="#" class="more">Read More</a>
-        
+          </div>
+          <div class="third">
+            <h4>Financial Aid</h4>
+            <img src="img/studio.jpg" alt="studio">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
+            <a href="#" class="more">Read More</a>
+          </div>
+          <div class="third">
+            <h4>Studios</h4>
+            <img src="img/studio.jpg" alt="studio">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
+            <a href="#" class="more">Read More</a>
+          </div>
         </div>
-        <div class="third"><h4>Financial Aid</h4>
-            <img src="img/studio.jpg" alt="studio">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
-        <a href="#" class="more">Read More</a></div>
-        <div class="third"><h4>Studios</h4>
-            <img src="img/studio.jpg" alt="studio">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
-        <a href="#" class="more">Read More</a></div>
-    </div>
-         </div>
-<!--         end container-->
-<!--         begin full width interstitial-->
-         <section id="banner"><h1 class="supersize">Gigantic Headline</h1></section>
-         
-         <div class="container">
-             <div class="row">
-                 <div class="quarter">
-                     <h4>Mentors</h4>
-                     <img src="img/studio.jpg" alt="studio">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus fuga eos maiores accusamus non consequatur animi optio accusantium, sunt iste?</p>
-                     <a href="#" class="more">Read More</a>
-                 </div>
-             <div class="quarter"><h4>Advising</h4>
-                 <img src="img/studio.jpg" alt="studio">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus fuga eos maiores accusamus non consequatur animi optio accusantium, sunt iste?</p>
-                 <a href="#" class="more">Read More</a></div>
-                 <div class="half"><h4>Events</h4>
-                <div class="stack"><h5>Lecture</h5>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p></div>
-                 <div class="stack"><h5>Performance</h5>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p></div>
-                 <div class="stack"><h5>Theatre</h5>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p></div>
-                 <div class="stack"><h5>Monster Truck Rally</h5>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p></div>
-                 <div class="stack"><h5>Foof Fight</h5>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p></div>
-             
-             
-             </div>
-         </div>
-    <div class="row">
+      </div>
+      <!--         end container-->
+      <!--         begin full width interstitial-->
+      <section id="banner">
+        <h1 class="supersize">Gigantic Headline</h1>
+      </section>
+      <div class="container">
+      <div class="row">
+        <div class="quarter">
+          <h4>Mentors</h4>
+          <img src="img/studio.jpg" alt="studio">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus fuga eos maiores accusamus non consequatur animi optio accusantium, sunt iste?</p>
+          <a href="#" class="more">Read More</a>
+        </div>
+        <div class="quarter">
+          <h4>Advising</h4>
+          <img src="img/studio.jpg" alt="studio">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus fuga eos maiores accusamus non consequatur animi optio accusantium, sunt iste?</p>
+          <a href="#" class="more">Read More</a>
+        </div>
+        <div class="half">
+          <h4>Events</h4>
+          <div class="stack">
+            <h5>Lecture</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
+          </div>
+          <div class="stack">
+            <h5>Performance</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
+          </div>
+          <div class="stack">
+            <h5>Theatre</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
+          </div>
+          <div class="stack">
+            <h5>Monster Truck Rally</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
+          </div>
+          <div class="stack">
+            <h5>Foof Fight</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="full">
-        <h1>Important Headline</h1>
-            <h2>Large Systems</h2>
-            <h3>Product Instructions</h3>
-            <h4>Late Deadline</h4>
-            <h5>Elegant Walruses</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo, deserunt eveniet?</p>
-        
+          <h1>Important Headline</h1>
+          <h2>Large Systems</h2>
+          <h3>Product Instructions</h3>
+          <h4>Late Deadline</h4>
+          <h5>Elegant Walruses</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo, deserunt eveniet?</p>
         </div>
-    </div>
-    
-    
-   
-  
-    </section><!--end main-->
-    <!--begin footer-->
-  <section id="footer">
- <h5> YAY! THE FOOTER</h5>
- 
-  
-
+      </div>
     </section>
-    
-</body>
+    <!--end main-->
+    <!--begin footer-->
+    <section id="footer">
+      <h5> YAY! THE FOOTER</h5>
+    </section>
+  </body>
 </html>

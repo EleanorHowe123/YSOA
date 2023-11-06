@@ -36,9 +36,6 @@ section {}
 	padding:20px;
 }
 
-
-
-
 /*typography*/
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Abril Fatface', serif;
@@ -100,7 +97,7 @@ nav a {
 align-items: flex-end;
 justify-content: center;
 min-height:600px;
-background-image:url("../img/hero.jpeg");
+background-image:url("../img/hero.jpg");
 background-size:cover;}
 #hero h1 {background-color:rgba(255,255,255,0.73);
 width:100%;padding:20px;text-align:center;}
@@ -150,8 +147,8 @@ width:100%;padding:20px;text-align:center;}
 }
 /*begin css for larger screens here*/
 @media screen and (min-width:740px) {
-/*    increase fontsacle for larger screens*/
-    html {font-size:125%;}
+/*  increase font scale for larger screens */
+	html {font-size:125%;}
   body {
 
   }
@@ -202,7 +199,6 @@ width:100%;padding:20px;text-align:center;}
   }
 
   #footer {
-  
     margin: auto;
     flex-direction: row;
 	  height:100px;
@@ -229,4 +225,42 @@ width:100%;padding:20px;text-align:center;}
     width: 20%;
     padding: 10px;
   }
+}
+
+/* eleanor's customizing CSS */
+.desktop-only {
+	display: none;
+}
+
+.open-house {
+	justify-content: center;
+  background-image: url("../img/open-house.jpg");
+	background-size: cover;
+}
+
+.call-to-action-button {
+	padding: 10px;
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+}
+
+.vertical-spread {
+	flex-grow: 1;
+	justify-content: space-between;
+	p {
+		padding-bottom: 10px;
+	}
+}
+
+@media screen and (min-width:740px) {
+	.desktop-only {
+		display: inherit;
+	}
+
+	.open-house {
+		background-image: url("../img/open-house.jpg");
+		background-size: cover;
+		height: 700px;
+	}
 }
