@@ -228,6 +228,46 @@ width:100%;padding:20px;text-align:center;}
 }
 
 /* eleanor's customizing CSS */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+	/*
+  background: #33B4FF;
+  color: white;
+	*/
+}
+
+#header {
+	height: unset;
+	/* background-color: #0068ff; */
+	background: #0068ff;
+	background: linear-gradient(to top, #fff, #004FF9);
+
+	.logo {
+		padding-top: 40px;
+	}
+	h1 a {
+		background-image: url("../img/logo-bright.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+
+#hero {
+	background-image:url("../img/eno-hero.jpg");
+	h1 {
+		text-align: left;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+@font-face {
+  font-family: "Montserrat";
+  src: "Montserrat.woff2";
+}
+
 .desktop-only {
 	display: none;
 }
@@ -253,7 +293,39 @@ width:100%;padding:20px;text-align:center;}
 	}
 }
 
+.search {
+	width: 40%;
+}
+
 @media screen and (min-width:740px) {
+	#header {
+		padding-top: 0;
+		height: inherit;
+		border: none;
+		h1 a {
+			width: 150px;
+		}
+	}
+
+	nav {
+		a {
+			color: #202d39;
+			font-size: 15px;
+		}
+		ul {
+			flex-wrap: nowrap;
+			font-size: 15px;
+			color: white;
+		}
+		.search {
+			max-width: 100px;
+			margin-top: 10px;
+		}
+		#hamburger {
+			max-width: 40px;
+		}
+	}
+
 	.desktop-only {
 		display: inherit;
 	}
@@ -263,4 +335,8 @@ width:100%;padding:20px;text-align:center;}
 		background-size: cover;
 		height: 700px;
 	}
+}
+/* hidden while working */
+.dropdown-menu {
+	display: none;
 }
