@@ -19,29 +19,29 @@
       <!--the logo will go here-->
       <h1 class="logo"><a href="#">Yale School of Art</a></h1>
       <!--the navigation-->
-      <nav>
-        <ul>
+      <nav class="navbar">
+        <ul class="nav-list">
 					<li><a href="#">Academics</a></li>
 					<li><a href="#">Admissions</a></li>
 					<li><a href="#">Student Life</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">News & Events</a></li>
 					<li><input class="search" type="text" value="Search..."/></li>
-					<li id="hamburger">
+					<li id="hamburger" class="nav-item">
 							<span class="hamburger-icon" aria-expanded="false">&#8801;
 							</span>
 					</li>
         </ul>
-				<ul class="dropdown-menu" aria-expanded="true">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Why YSoA</a></li>
-						<li><a href="#">Financial Aid</a></li>
-						<li><a href="#">Alumni</a></li>
-						<li><a href="#">Calendar</a></li>
-						<li><a href="#">Faculty</a></li>
-						<li><a href="#">After YSoA</a></li>
-						<li><a href="#">Our Work</a></li>
-						<li><a href="#">Contact Us</a></li>
+				<ul class="dropdown-menu" aria-expanded=true>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Why YSoA</a></li>
+					<li><a href="#">Financial Aid</a></li>
+					<li><a href="#">Alumni</a></li>
+					<li><a href="#">Calendar</a></li>
+					<li><a href="#">Faculty</a></li>
+					<li><a href="#">After YSoA</a></li>
+					<li><a href="#">Our Work</a></li>
+					<li><a href="#">Contact Us</a></li>
 				</ul>
       </nav>
     </section>
@@ -53,10 +53,12 @@
       <div class="container">
         <div class="row">
           <div class="full open-house">
+						<div class="white-overlay">
 							<h3>Undergraduate Open House</h3>
 							<p>Prospective students: come one, come all!</p>
 							<p>In-person campus tours</p>
-							<p><a href="#" class="more">Sunday, October 22</a></p>
+							<p><a href="#" class="more">Sunday, October 22></a></p>
+						</div>
           </div>
 				</div>
 				<div class="row">
@@ -125,6 +127,12 @@
           </div>
         </div>
       </div>
+			<div class="apply-now-container">
+				<div class="apply-now">
+					<h1>Let us elevate your creative journey</h1>
+					<a class="apply-button" href="#">Apply Now</a>
+				</div>
+			</div>
 		</section>
     <!--end main-->
     <!--begin footer-->
@@ -166,18 +174,18 @@
 				dots[slideIndex-1].className += " active";
 			}
 		</script>
-		<script>
-				const hamburgerIcon = document.querySelector('.hamburger-icon');
-				const dropdownMenu = document.querySelector('.dropdown-menu');
-				function toggleDropdown() {
-						dropdownMenu.classList.toggle('show');
-				}
-				hamburgerIcon.addEventListener('click', toggleDropdown);
-				document.addEventListener('click', function (event) {
-						if (!hamburgerIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
-								dropdownMenu.classList.remove('show');
-						}
-				});
-		</script>
+    <script>
+        const hamburgerIcon = document.querySelector('.hamburger-icon');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        function toggleDropdown() {
+            dropdownMenu.classList.toggle('show');
+        }
+        hamburgerIcon.addEventListener('click', toggleDropdown);
+        document.addEventListener('click', function (event) {
+            if (!hamburgerIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
   </body>
 </html>
