@@ -45,22 +45,9 @@
 				</ul>
       </nav>
     </section>
-		<script>
-				const hamburgerIcon = document.querySelector('.hamburger-icon');
-				const dropdownMenu = document.querySelector('.dropdown-menu');
-				function toggleDropdown() {
-						dropdownMenu.classList.toggle('show');
-				}
-				hamburgerIcon.addEventListener('click', toggleDropdown);
-				document.addEventListener('click', function (event) {
-						if (!hamburgerIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
-								dropdownMenu.classList.remove('show');
-						}
-				});
-		</script>
     <div id="hero">
 			<h1>Yale</br>School</br>of</br>Art</h1>
-			<h2 class="desktop-only">Innovative Expression. Mastery of Craft.</h2>
+			<h2 class="desktop-only"><em>Innovative Expression.</br>Mastery of Craft.</em></h2>
     </div>
     <section id="main">
       <div class="container">
@@ -74,6 +61,7 @@
 				</div>
 				<div class="row">
           <div class="half vertical-spread">
+						<h4 class="section-tag">upcoming</h4>
 						<h3>Contemporary Art Exhibition - Fall Showcase</h3>
 						<p>November 20, 2023</br>6:00 PM - 9:00 PM</p>
 						<p>Nueva Collections Gallery</br>2539 Horvath Ulica, New Haven, Connecticut 33259</p>
@@ -84,126 +72,112 @@
           </div>
 				</div>
 				<div class="row">
-          <div class="full">
-						<div id="slider" class="slider">
-							<ul>
-								<li>
-									<div class="slider-container slide1">
-										<h4>The Secret Lives of Pickles</h4>
-									<div>
-								</li>
-								<li>
-									<div class="slider-container slide2">
-										<h4>Abstract Algebra: A Soap Opera of Expressions</h4>
-									</div>
-								</li>
-								<li>
-									<div class="slider-container slide3">
-										<h4>Potato Salad at Midnight</h4>
-									</div>
-								</li>
-								<li>
-									<div class="slider-container slide4">
-										<h4>Chaos in a Blender</h4>
-									</div>
-								</li>
-							</ul>
+					<div class="full">
+						<h3>Student Gallery</h3>
+						<div class="slideshow-container">
+							<div class="mySlides fade">
+								<div class="numbertext">1 / 4</div>
+								<img src="img/slider/gator.jpg" alt="gator">
+								<div class="text">Caption Text</div>
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">2 / 4</div>
+								<img src="img/slider/fabric.jpg" alt="fabric">
+								<div class="text">Caption Two</div>
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">3 / 4</div>
+								<img src="img/slider/pillars.jpg" alt="pillars">
+								<div class="text">Caption Three</div>
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">4 / 3</div>
+								<img src="img/slider/shadow.jpg" alt="shadow">
+								<div class="text">Caption Three</div>
+							</div>
+							<!-- Next and previous buttons -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-          <div class="half">
-            <h3>Award Winning Faculty</h3>
-            <img src="img/prof.jpg" alt="professor">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil illum, molestias velit adipisicing elit. Quasi vel aut mollitia.</p>
+					<div class="full">
+						<h3>Alumni in the News</h3>
+					</div>
+					<div class="third">
+            <h4>Catalina Ouyang</h4>
+            <img class="alumna-img" src="img/alumni/cat.jpg" alt="alumna cat">
+            <p>Catalina Ouyang Questions White Male Allyship</p>
             <a href="#" class="more">Read More</a>
           </div>
-          <div class="half">
-            <h3>World Class Facilities</h3>
-            <img src="img/studio.jpg" alt="studio">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil illum, molestias velit. consectetur adipisicing elit. Quasi vel aut mollitia.</p>
+					<div class="third">
+            <h4>Eva Hesse</h4>
+            <img class="alumna-img" src="img/alumni/eva.webp" alt="alumna eva h">
+            <p>Eva Hesse drawing exhibit at Oberlin College shows how her art triumphed over tragedies of a troubled life</p>
             <a href="#" class="more">Read More</a>
           </div>
-        </div>
-        <div class="row">
-          <div class="third">
-            <h4>Housing</h4>
-            <img src="img/studio.jpg" alt="studio">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
-            <a href="#" class="more">Read More</a>
-          </div>
-          <div class="third">
-            <h4>Financial Aid</h4>
-            <img src="img/studio.jpg" alt="studio">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
-            <a href="#" class="more">Read More</a>
-          </div>
-          <div class="third">
-            <h4>Studios</h4>
-            <img src="img/studio.jpg" alt="studio">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
+					<div class="third">
+            <h4>Jonathan Borofsky</h4>
+            <img class="alumna-img" src="img/alumni/jon.jpg" alt="alumnus jonathan b">
+            <p>Jonathan Borofsky’s “Walking to the Sky” Comes to Campus<p>
             <a href="#" class="more">Read More</a>
           </div>
         </div>
       </div>
-      <!--         end container-->
-      <!--         begin full width interstitial-->
-      <section id="banner">
-        <h1 class="supersize">Gigantic Headline</h1>
-      </section>
-      <div class="container">
-      <div class="row">
-        <div class="quarter">
-          <h4>Mentors</h4>
-          <img src="img/studio.jpg" alt="studio">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus fuga eos maiores accusamus non consequatur animi optio accusantium, sunt iste?</p>
-          <a href="#" class="more">Read More</a>
-        </div>
-        <div class="quarter">
-          <h4>Advising</h4>
-          <img src="img/studio.jpg" alt="studio">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus fuga eos maiores accusamus non consequatur animi optio accusantium, sunt iste?</p>
-          <a href="#" class="more">Read More</a>
-        </div>
-        <div class="half">
-          <h4>Events</h4>
-          <div class="stack">
-            <h5>Lecture</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
-          </div>
-          <div class="stack">
-            <h5>Performance</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
-          </div>
-          <div class="stack">
-            <h5>Theatre</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
-          </div>
-          <div class="stack">
-            <h5>Monster Truck Rally</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
-          </div>
-          <div class="stack">
-            <h5>Foof Fight</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aspernatur id earum.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="full">
-          <h1>Important Headline</h1>
-          <h2>Large Systems</h2>
-          <h3>Product Instructions</h3>
-          <h4>Late Deadline</h4>
-          <h5>Elegant Walruses</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo, deserunt eveniet?</p>
-        </div>
-      </div>
-    </section>
+		</section>
     <!--end main-->
     <!--begin footer-->
     <section id="footer">
-      <h5> YAY! THE FOOTER</h5>
+			<ul class="nav-items">
+				<li><a href="#">Campus Map</a></li>
+				<li><a href="#">Social Media</a></li>
+				<li><a href="#">Employment Opportunities</a></li>
+				<li><a href="#">Publications</a></li>
+				<li><a href="#">Alumni</a></li>
+				<li><a href="#">Newsletter Subscription</a></li>
+			</ul>
     </section>
+    <script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				let i;
+				let slides = document.getElementsByClassName("mySlides");
+				let dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+		</script>
+		<script>
+				const hamburgerIcon = document.querySelector('.hamburger-icon');
+				const dropdownMenu = document.querySelector('.dropdown-menu');
+				function toggleDropdown() {
+						dropdownMenu.classList.toggle('show');
+				}
+				hamburgerIcon.addEventListener('click', toggleDropdown);
+				document.addEventListener('click', function (event) {
+						if (!hamburgerIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+								dropdownMenu.classList.remove('show');
+						}
+				});
+		</script>
   </body>
 </html>
