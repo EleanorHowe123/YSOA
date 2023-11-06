@@ -1,148 +1,191 @@
 <!doctype html>
 <html lang="en">
-	<head>
-			<meta charset="UTF-8">
-			<!--titles are important for SEO-->
-			<title>Yale School of Art</title>
-			<!--this helps make the page responsive-->
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<!--link to stylesheet-->
-			<link href="css/style.css" rel="stylesheet" type="text/css">
-			<link rel="preconnect" href="https://fonts.googleapis.com">
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
-	</head>
-	<body>
-			<section id="header">
-					<!--the logo will go here-->
-					<h1><a href="#">Yale School of Art</a></h1>
-					<!--the navigation-->
-					<nav>
-							<ul class="nav-items">
-									<li><a href="#">Academics</a></li>
-									<li><a href="#">Admissions</a></li>
-									<li><a href="#">Student Life</a></li>
-									<li><a href="#">About</a></li>
-									<li><a href="#">Gallery</a></li>
-									<li><a href="#">News & Events</a></li>
-									<li id="hamburger" class="nav-item">
-											<span class="hamburger-icon" aria-expanded="false">&#8801;
-											</span>
-									</li>
-							</ul>
-							<ul class="dropdown-menu" aria-expanded="true">
-									<li><a href="#">Home</a></li>
-									<li><a href="#">Why YSoA</a></li>
-									<li><a href="#">Financial Aid</a></li>
-									<li><a href="#">Alumni</a></li>
-									<li><a href="#">Calendar</a></li>
-									<li><a href="#">Faculty</a></li>
-									<li><a href="#">After YSoA</a></li>
-									<li><a href="#">Our Work</a></li>
-									<li><a href="#">Contact Us</a></li>
-							</ul>
-					</nav>
-			</section>
-			<script>
-					const hamburgerIcon = document.querySelector('.hamburger-icon');
-					const dropdownMenu = document.querySelector('.dropdown-menu');
-					// Function to toggle the dropdown menu visibility
-					function toggleDropdown() {
-							dropdownMenu.classList.toggle('show');
-					}
-					// Event listener to handle the click on the hamburger icon
-					hamburgerIcon.addEventListener('click', toggleDropdown);
-					// Event listener to close the dropdown when clicking outside
-					document.addEventListener('click', function (event) {
-							if (!hamburgerIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
-									dropdownMenu.classList.remove('show');
-							}
-					});
-			</script>
-
-			</script>
-			<section id="main" class="analogous-color-bg-2">
-					<div class="row">
-							<div class="full">
-									<h2 class="white-heading">Yale School of Art</h2>
-									<h4 class="white-heading">Innovative Expression. Mastery of Craft.</h3>
-							</div>
-					</div>
-					<div id="hero">
-							<h1>Undergraduate Open House</h1>
-							<p>Prospective students: come one, come all!</p>;
+  <head>
+    <meta charset="UTF-8">
+    <!--titles are important for SEO-->
+    <title>Yale School of Art</title>
+    <!--    google fonts code
+      -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+    <!--this helps make the page responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--link to stylesheet-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <section id="header">
+      <!--the logo will go here-->
+      <h1 class="logo"><a href="#">Yale School of Art</a></h1>
+      <!--the navigation-->
+      <nav class="navbar">
+        <ul class="nav-list">
+					<li><a href="#">Academics</a></li>
+					<li><a href="#">Admissions</a></li>
+					<li><a href="#">Student Life</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">News & Events</a></li>
+					<li><input class="search" type="text" value="Search..."></li>
+					<li id="hamburger" class="nav-item">
+							<span class="hamburger-icon" role="navigation" aria-expanded="false">&#8801;
+							</span>
+					</li>
+        </ul>
+				<ul class="dropdown-menu" aria-expanded=true>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Why YSoA</a></li>
+					<li><a href="#">Financial Aid</a></li>
+					<li><a href="#">Alumni</a></li>
+					<li><a href="#">Calendar</a></li>
+					<li><a href="#">Faculty</a></li>
+					<li><a href="#">After YSoA</a></li>
+					<li><a href="#">Our Work</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+      </nav>
+    </section>
+    <div id="hero">
+			<h1>Yale<br>School<br>of<br>Art</h1>
+			<h2 class="desktop-only"><em>Innovative Expression.<br>Mastery of Craft.</em></h2>
+    </div>
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="full open-house">
+						<div class="white-overlay">
+							<h3>Undergraduate Open House</h3>
+							<p>Prospective students: come one, come all!</p>
 							<p>In-person campus tours</p>
-							<p>Sunday, October 22</p>
+							<p><a href="#" class="more">Sunday, October 22></a></p>
+						</div>
+          </div>
+				</div>
+				<div class="row">
+          <div class="half vertical-spread">
+						<h4 class="section-tag">upcoming</h4>
+						<h3>Contemporary Art Exhibition - Fall Showcase</h3>
+						<p>November 20, 2023<br>6:00 PM - 9:00 PM</p>
+						<p>Nueva Collections Gallery<br>2539 Horvath Ulica, New Haven, Connecticut 33259</p>
+						<button class="call-to-action-button">learn more</button>
+          </div>
+          <div class="half">
+            <img src="img/eight-women.jpg" alt="eight seated women">
+          </div>
+				</div>
+				<div class="row">
+					<div class="full">
+						<h3>Student Gallery</h3>
+						<div class="slideshow-container">
+							<div class="mySlides fade">
+								<div class="numbertext">1 / 4</div>
+								<img src="img/slider/gator.jpg" alt="gator">
+								<div class="text">Caption Text</div>
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">2 / 4</div>
+								<img src="img/slider/fabric.jpg" alt="fabric">
+								<div class="text">Caption Two</div>
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">3 / 4</div>
+								<img src="img/slider/pillars.jpg" alt="pillars">
+								<div class="text">Caption Three</div>
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">4 / 3</div>
+								<img src="img/slider/shadow.jpg" alt="shadow">
+								<div class="text">Caption Three</div>
+							</div>
+							<!-- Next and previous buttons -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
 					</div>
-					<div id="slider" class="slider">
-							<ul>
-									<li>
-											<div class="slider-container slide1">
-													<h4>The Secret Lives of Pickles</h4>
-											<div>
-									</li>
-									<li>
-											<div class="slider-container slide2">
-													<h4>Abstract Algebra: A Soap Opera of Expressions</h4>
-											</div>
-									</li>
-									<li>
-											<div class="slider-container slide3">
-													<h4>Potato Salad at Midnight</h4>
-											</div>
-									</li>
-									<li>
-											<div class="slider-container slide4">
-													<h4>Chaos in a Blender</h4>
-											</div>
-									</li>
-							</ul>
+				</div>
+				<div class="row">
+					<div class="full">
+						<h3>Alumni in the News</h3>
 					</div>
+					<div class="third">
+            <h4>Catalina Ouyang</h4>
+            <img class="alumna-img" src="img/alumni/cat.jpg" alt="alumna cat">
+            <p>Catalina Ouyang Questions White Male Allyship</p>
+            <a href="#" class="more">Read More</a>
+          </div>
+					<div class="third">
+            <h4>Eva Hesse</h4>
+            <img class="alumna-img" src="img/alumni/eva.webp" alt="alumna eva h">
+            <p>Eva Hesse drawing exhibit at Oberlin College shows how her art triumphed over tragedies of a troubled life</p>
+            <a href="#" class="more">Read More</a>
+          </div>
+					<div class="third">
+            <h4>Jonathan Borofsky</h4>
+            <img class="alumna-img" src="img/alumni/jon.jpg" alt="alumnus jonathan b">
+            <p>Jonathan Borofsky’s “Walking to the Sky” Comes to Campus<p>
+            <a href="#" class="more">Read More</a>
+          </div>
+        </div>
+      </div>
+			<div class="apply-now-container">
+				<div class="apply-now">
+					<h1>Let us elevate your creative journey</h1>
+					<a class="apply-button" href="#">Apply Now</a>
+				</div>
+			</div>
+		</section>
+    <!--end main-->
+    <!--begin footer-->
+    <section id="footer">
+			<ul class="nav-items">
+				<li><a href="#">Campus Map</a></li>
+				<li><a href="#">Social Media</a></li>
+				<li><a href="#">Employment Opportunities</a></li>
+				<li><a href="#">Publications</a></li>
+				<li><a href="#">Alumni</a></li>
+				<li><a href="#">Newsletter Subscription</a></li>
+			</ul>
+    </section>
+    <script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
 
-					<div class="row elevate-section">
-							<div class="half">
-									<h1>Let us elevate your creative journey.</h1>
-							</div>
-							<div class="half">
-									<button>Apply Now</button>
-							</div>
-					</div>
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
 
-					<div class="row">
-							<div class="half">
-									<h2>Upcoming Events</h2>
-									<div class="placeholder-picture"></div>
-									<p>Modern Masters Artist Spotlight</p>
-									<p>October 23, 2023<br />address line 1<br />address line 2<br /></p>
-							</div>
-							<div class="half">
-									<div class="calendar-event">
-											<div class=" calendar-event-image"></div>
-											<div class="calendar-event-info">
-													<p>New Haven Creators Circle</p>
-													<p>November 5, 2023<br />Student Union Building<br />New Haven, CT<br /></p>
-											</div>
-									</div>
-									<div class="calendar-event">
-											<div class=" calendar-event-image2"></div>
-											<div class="calendar-event-info">
-													<p>Pee-Wee Gallery Exhibition</p>
-													<p>November 30, 2023<br />location tbd<br />New Haven, CT<br /></p>
-											</div>
-									</div>
-							</div>
-					</div>
-			</section><!--end main-->
-			<!--begin footer-->
-			<section id="footer">
-					<ul class="nav-items">
-							<li>Follow Us</li>
-							<li><a href="#">Campus Map</a></li>
-							<li><a href="#">Social Media</a></li>
-							<li><a href="#">Employment Opportunities</a></li>
-							<li><a href="#">Publications</a></li>
-							<li><a href="#">Alumni</a></li>
-							<li><a href="#">Newsletter Subscription</a></li>
-			</section>
-	</body>
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				let i;
+				let slides = document.getElementsByClassName("mySlides");
+				let dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+		</script>
+    <script>
+        const hamburgerIcon = document.querySelector('.hamburger-icon');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        function toggleDropdown() {
+            dropdownMenu.classList.toggle('show');
+        }
+        hamburgerIcon.addEventListener('click', toggleDropdown);
+        document.addEventListener('click', function (event) {
+            if (!hamburgerIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+  </body>
 </html>
