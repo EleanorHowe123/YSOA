@@ -1,0 +1,802 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  src: "Montserrat.woff2";
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+html {
+  font-size: 100%;
+}
+/*16px*/
+body {
+  background: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+p {
+  margin-bottom: 1rem;
+}
+button {
+  background-color: #ffd700;
+  /* Choose your desired background color */
+  color: #333;
+  /* Text color */
+  font-family: "Montserrat", sans-serif;
+  /* Choose an appropriate font-family */
+  font-size: 20px;
+  /* Choose the desired font size */
+  border: none;
+  padding: 15px 30px;
+  /* Adjust padding to make the button larger */
+  border-radius: 5px;
+  /* Rounded corners for a more attractive look */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #ffd700;
+  /* Change the background color on hover */
+  transform: scale(1.05);
+  /* Add a slight scale effect on hover */
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+h2 {
+  font-size: 2.441rem;
+}
+h3 {
+  font-size: 1.953rem;
+}
+h4 {
+  font-size: 1.563rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+/* CSS Document */
+* {
+  /*universal reset*/
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* mobile first */
+body {
+  background: #33B4FF;
+  color: white;
+}
+
+/* Presentational stuff */
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 99;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, .75);
+  box-shadow: 0 1em 2em -1em rgba(0, 0, 0, .5);
+  padding: 1em 2em;
+  line-height: 1.5;
+
+  small {
+    display: block;
+    text-transform: lowercase;
+    font-size: .7em;
+
+    &:first-child {
+      border-bottom: 1px solid rgba(0, 0, 0, .25);
+      padding-bottom: .5em;
+    }
+
+    &:last-child {
+      border-top: 1px solid rgba(0, 0, 0, .25);
+      padding-top: .5em;
+    }
+  }
+}
+
+body {
+  font: 14px/2 "Open sans", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  font: 12px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-indent: 2px;
+  text-transform: uppercase;
+  transition: color 0.1s linear 0.05s;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #e1e1e1;
+    z-index: 1;
+    opacity: 0;
+    transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
+  }
+
+  &::after {
+    transition: border 0.1s linear 0.05s;
+  }
+
+  .btn-inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover {
+    color: #373737;
+    transition: color 0.1s linear 0s;
+
+    &::before {
+      top: 0;
+      height: 100%;
+      opacity: 1;
+      transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
+    }
+
+    &::after {
+      border-color: #373737;
+      transition: border 0.1s linear 0s;
+    }
+  }
+}
+
+
+/* Style white heading text */
+.white-heading {
+  color: rgb(0, 0, 0);
+}
+
+/* Style black headings */
+.black-heading {
+  color: black;
+}
+
+.analogous-color-bg {
+  background: #FFFFFF;
+}
+
+.analogous-color-bg-2 {
+  background: #FFFFFF;
+  ;
+}
+
+/* CSS for the "Let us elevate" section */
+
+.elevate-section {
+  background: white;
+}
+
+.elevate-section h1 {
+  color: black;
+}
+
+
+/* Style the navigation items */
+.nav-items li {
+  margin-right: 25px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* Style the navigation links */
+.nav-items li a {
+  text-decoration: none;
+  transition: all 0.3s;
+  /* Add other common styles here, e.g., color, etc. */
+  font-size: 16px;
+  /* Maintain the font size here */
+}
+
+/* Update the "hamburger" icon for better visibility */
+#hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Center horizontally */
+  margin-left: auto;
+  margin-right: 0;
+  /* Remove the right margin */
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+
+.hamburger-icon {
+  font-size: 26px;
+  /* Adjust font size for better visibility */
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 10%;
+  /* Position it below the parent element */
+  right: 0;
+  /* Position it at the right edge of the parent element */
+  background-color: rgba(0, 212, 255, 1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 1;
+  max-height: 380px;
+  /* Set a maximum height to limit vertical stretching */
+  overflow-y: auto;
+  /* Add a vertical scrollbar if content exceeds max-height */
+  white-space: nowrap;
+  /* Prevent line breaks in menu items */
+}
+
+/* Style the individual dropdown items */
+.dropdown-menu li {
+  list-style: none;
+  /* Remove default list bullets */
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 14px;
+  /* Optional font size adjustment */
+  color: #333;
+  /* Optional text color */
+  text-decoration: none;
+  /* Optional text decoration */
+}
+
+/* When the "show" class is added to the dropdown, display it */
+.dropdown-menu.show {
+  display: block;
+}
+
+
+.row {
+  padding-top: 0px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.row h1 {
+  text-align: center;
+  /* Center the "Alumni in the News" heading */
+  margin-bottom: 0px;
+  /* Add spacing below the heading */
+}
+
+.row .third {
+  width: 30%;
+  /* Adjust width as needed for even spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center text and images */
+}
+
+.row .alumni-image {
+  /* Your styles for the alumni images */
+}
+
+.row h3 {
+  margin-top: 10px;
+  /* Add spacing between images and text captions */
+}
+
+
+.placeholder-picture {
+  background-repeat: no-repeat;
+  padding: 40px;
+  background-image: url("../images/Guernica.jpeg");
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+}
+
+.calendar-event {
+  display: flex;
+}
+
+.calendar-event-image {
+  background-repeat: no-repeat;
+  padding: 40px;
+  background-image: url("../images/babe.jpeg");
+  background-size: contain;
+}
+
+.calendar-event-image2 {
+  background-repeat: no-repeat;
+  padding: 40px;
+  background-image: url("../images/PleasurePillars.jpeg");
+  background-size: contain;
+}
+
+.alumni-image {
+  background-repeat: no-repeat;
+  padding: 40px;
+  background-image: url("../images/Catalina-Ouyang.jpeg");
+  background-size: contain;
+}
+
+.alumni-image-2 {
+  background-repeat: no-repeat;
+  padding: 40px;
+  background-image: url("../images/Eva-Hesse.webp");
+  background-size: contain;
+}
+
+.alumni-image-3 {
+  background-repeat: no-repeat;
+  padding: 40px;
+  background-image: url("../images/Jonathan-Borofsky.jpeg");
+  background-size: contain;
+}
+
+.full {
+  justify-content: center;
+  background-color: #FFFFFF;
+  padding: 10%;
+}
+
+.half h2 {
+  text-align: center;
+}
+
+/*responsive framework*/
+.full,
+.half,
+.third,
+.two_thirds,
+.quarter,
+.fifth,
+.sixth {
+  width: 100%;
+  outline: thin transparent;
+  /*delete this*/
+  display: flex;
+  /*centers all text*/
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+
+
+/*typography*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-family: "Montserrat", "Bitstream Vera Serif", "serif";
+
+}
+
+p {
+  font-family: "Montserrat", "Bitstream Vera Serif", "serif";
+  color: black;
+  padding: 20px;
+}
+
+/*navigation*/
+
+nav ul {
+  list-style-type: none;
+  font-family: "Montserrat", "Bitstream Vera Serif", "serif";
+
+}
+
+nav li {
+  text-align: center;
+  font-size: x-small;
+  width: 100%;
+  height: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  line-height: 30px;
+  color: #ffff;
+}
+
+/*header*/
+
+#header {
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0px solid slategrey;
+  background: rgb(0, 104, 255);
+  background: linear-gradient(90deg, rgba(0, 104, 255, 1) 0%, rgba(0, 104, 255, 1) 41%, rgba(0, 212, 255, 1) 100%);
+
+}
+
+#header h1 a {
+  background-image: url("../images/logo-kris.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-indent: -9999px;
+  margin: 10px auto;
+}
+
+
+
+#hero {
+  background-image: url("../images/OpenHouse.jpg");
+  min-height: 400px;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+/* Create the overlay with opacity */
+#hero::before {
+  content: "";
+  background: rgb(0, 104, 255, 0.3);
+  /* Adjust opacity (0.5) as needed */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background 0.3s;
+}
+
+/* Style the text to appear above the overlay */
+#hero h1,
+#hero p {
+  z-index: 1;
+  color: white;
+  /* Set the text color to white */
+}
+
+#hero:hover::before {
+  background: rgba(0, 0, 0, 0.3);
+  /* Adjust opacity (0.3) as needed */
+}
+
+/*footer*/
+#footer {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  padding: 5%;
+  margin-bottom: 0;
+}
+
+#footer ul {
+  list-style-type: none;
+}
+
+#footer a {
+  color: white;
+  line-height: 24px;
+}
+
+/*begin css for larger screens here*/
+@media screen and (min-width:768px) {
+  body {}
+
+  #header {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+
+  }
+
+  #header h1 {
+    width: 20%;
+  }
+
+  #header h1 a {
+    font-weight: bold;
+    background-image: url("../images/logo-kris.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-indent: -9999px;
+  }
+
+  nav {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: space-around;
+  }
+
+  nav li {
+    text-align: center;
+    width: 25%;
+    height: 40px;
+  }
+
+  nav a {
+    color: white;
+    font-size: 10px;
+
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: auto;
+    background: white;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  #footer {
+
+    margin: auto;
+    flex-direction: row;
+    height: 25%;
+    background: #333;
+    color: white;
+  }
+
+  .full {
+    width: 100%;
+    height:fit-content;
+  }
+
+  .half {
+    width: 50%;
+    text-align: left;
+  }
+
+  .third {
+    width: 33.33%;
+  }
+
+  .two_thirds {
+    width: 66.66%;
+  }
+
+  .quarter {
+    width: 25%;
+  }
+
+  .fifth {
+    width: 20%;
+    padding: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  a:hover {
+    border-bottom: 1px dashed #ED971F;
+    color: #ED971F;
+    text-decoration: underline;
+  }
+}
+
+/**** slider ****/
+#slider,
+ul {
+  height: 200px;
+}
+
+#slider {
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  height: 400px;
+  width: 600px;
+}
+
+#slider li {
+  float: left;
+  position: relative;
+  width: 600px;
+  display: inline-block;
+  height: 400px;
+}
+
+#slider ul {
+  list-style: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 9000px;
+  transition: left .3s linear;
+  -moz-transition: left .3s linear;
+  -o-transition: left .3s linear;
+  -webkit-transition: left .3s linear;
+  margin-left: -25px;
+  font-family: century gothic;
+  color: #666;
+}
+
+/*** Content ***/
+.slider {
+	.slide-title {
+		display: inline-block;
+		width: 30%;
+	}
+
+	.slider-container {
+		margin: 0 auto;
+		padding: 0;
+		max-width: 100%;
+		width: 550px;
+		min-height: 300px;
+		align-content: center;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.slider-container h4 {
+		color: #0A7FAD;
+		text-shadow: -1px 0px 0px rgba(0, 0, 0, 0.50);
+	}
+
+	.slider-container p {
+		margin: 10px 25px;
+		font-weight: semi-bold;
+		line-height: 150%;
+		text-align: justify;
+	}
+
+	/*** target hooks ****/
+
+	@-webkit-keyframes slide-animation {
+		0% {
+			opacity: 0;
+		}
+		2% {
+			opacity: 1;
+		}
+		20% {
+			left: 0px;
+			opacity: 1;
+		}
+		22.5% {
+			opacity: 0.6;
+		}
+		25% {
+			left: -600px;
+			opacity: 1;
+		}
+		45% {
+			left: -600px;
+			opacity: 1;
+		}
+		47.5% {
+			opacity: 0.6;
+		}
+		50% {
+			left: -1200px;
+			opacity: 1;
+		}
+		70% {
+			left: -1200px;
+			opacity: 1;
+		}
+		72.5% {
+			opacity: 0.6;
+		}
+		75% {
+			left: -1800px;
+			opacity: 1;
+		}
+		95% {
+			opacity: 1;
+		}
+		98% {
+			left: -1800px;
+			opacity: 0;
+		}
+		100% {
+			left: 0px;
+			opacity: 0;
+		}
+	}
+
+	#slider ul {
+		-webkit-animation: slide-animation 25s infinite;
+	}
+
+	/* use to paused the content on mouse over */
+	#slider ul:hover {
+		-moz-animation-play-state: paused;
+		-webkit-animation-play-state: paused;
+	}
+
+	/* pure-css slider images */
+	.slider_slide {
+		background-size: contain;
+		background-repeat: no-repeat;
+		align-items: center;
+	}
+	.slide1 {
+		background-image: url("../images/Slider1.webp");
+	}
+	.slide3 {
+		background-image: url("../images/Slider3.jpeg");
+	}
+	.slide2 {
+		background-image: url("../images/Slider2.jpeg");
+	}
+	.slide4 {
+		background-image: url("../images/Slider4.jpeg");
+	}
+}
