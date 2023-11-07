@@ -2,12 +2,11 @@
  .dropdown-menu {
 	 display: none;
 	 position: absolute;
-	 top: 100px;
-	 width: 160px;
+	 width: 100vw;
 	 right: 0;
+	 top: 100px;
 	 background: #0068ff;
 	 z-index: 1;
-	 max-height: 380px;
 	 overflow-y: auto;
 	 white-space: nowrap;
 }
@@ -15,6 +14,7 @@
 	 background-color: #f3b300;
 }
  .dropdown-menu li {
+	 height: 40px;
 	 width: 100%;
 	 text-align: left;
 	 font-size: 14px;
@@ -30,4 +30,12 @@
 /* When the "show" class is added to the dropdown, display it */
  .dropdown-menu.show {
 	 display: block;
+}
+
+@media screen and (min-width: 740px) {
+ .dropdown-menu {
+	 top: 150px;
+	 max-height: 380px;
+	 width: 100%;
+ }
 }

@@ -5,12 +5,18 @@
  nav li {
 	 text-align: center;
 	 width: 100%;
-	 height: 40px;
 }
  nav a {
 	 text-decoration: none;
 	 line-height: 40px;
 	 color: #00356b;
+}
+
+#hamburger {
+	width: 100px;
+	height: 100px;
+	color: white;
+	position: relative;
 }
 
 /* footer */
@@ -38,12 +44,21 @@
 #footer a {
 	color: white;
 	line-height: 24px;
+	padding: 8px 12px;
+	transition: background-color 0.3s;
+	border-radius: 5px;
 }
+
+#footer a:hover {
+	background-color: #202020;
+}
+
 /*header*/
  #header {
-	 display: flex;
-	 flex-direction: column;
-	 background: linear-gradient(to top, #fff, #004ff9);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: linear-gradient(to top, #fff, #004ff9);
 }
  #header h1 a {
 	 background-image: url("../img/logo-bright.png");
@@ -55,36 +70,43 @@
 	 text-indent: -9999px;
 	 margin: auto;
 }
+#header h1.logo {
+	padding: 0;
+}
 
+#hamburger span {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 50px;
+	min-width: 20px;
+	min-height: 20px;
+}
+
+/* desktop-only styles */
  @media screen and (min-width: 740px) {
+	 #hamburger {
+		 width: inherit;
+		 height: 100%;
+	 }
+	 #hamburger span {
+		 transform: translateY(-50%);
+	 }
+
 	 #header {
-		 display: flex;
-		 flex-direction: row;
 		 background-color: #00356b;
 	}
 	 #header h1 a {
 		 height: 150px;
 		 width: 150px;
 	}
-	 #header h1.logo {
-		 padding: 0;
-	}
 	 nav .search {
 		 max-width: 100px;
 		 margin-top: 10px;
 	}
-	 nav #hamburger {
-		 min-width: 20px;
-		 min-height: 20px;
-	}
-	 nav #hamburger img {
-		 width: 20px;
-		 height: 20px;
-	}
 	 nav {
 		 display: flex;
 		 width: 100%;
-		 padding-right: 20px;
 	}
 	nav a {
 		 color: #202d39;
@@ -99,16 +121,22 @@
 		 color: white;
 	}
 	 nav li {
-		 text-align: center;
-		 width: 25%;
-		 height: 40px;
+		 height: 100%;
+		 position: relative;
+		text-align: unset;
 	}
-	 nav a {
+	 nav li a, nav li .search-wrapper, nav li span {
 		 color: white;
-		 font-size: 24px;
+		 font-size: 20px;
+		 position: absolute;
+		 top: 50%;
+		 width: 100%;
+		 text-align: center;
+		 transform: translateY(-50%);
 	}
 	 #footer {
 		height: 200px;
+		padding: 0;
 	}
 	#footer ul {
 		flex-direction: row;

@@ -21,18 +21,20 @@
       <!--the navigation-->
       <nav class="navbar">
         <ul class="nav-list">
-					<li><a href="#">Academics</a></li>
-					<li><a href="#">Admissions</a></li>
-					<li><a href="#">Student Life</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">News & Events</a></li>
-					<li><input class="search" type="text" value="Search..."></li>
+					<li class="desktop-only"><a href="#">Academics</a></li>
+					<li class="desktop-only"><a href="#">Admissions</a></li>
+					<li class="desktop-only"><a href="#">Student Life</a></li>
+					<li class="desktop-only"><a href="#">About</a></li>
+					<li class="desktop-only"><a href="#">News & Events</a></li>
+					<li class="desktop-only"><div class="search-wrapper"><input class="search" type="text" value="Search..."></div></li>
 					<li id="hamburger" class="nav-item">
-							<span class="hamburger-icon" role="navigation" aria-expanded="false">&#8801;
-							</span>
-					</li>
-        </ul>
+						<span class="hamburger-icon" role="navigation" aria-expanded="false">&#8801;</span>
 				<ul class="dropdown-menu" aria-expanded=true>
+					<li class="mobile-only"><a href="#">Academics</a></li>
+					<li class="mobile-only"><a href="#">Admissions</a></li>
+					<li class="mobile-only"><a href="#">Student Life</a></li>
+					<li class="mobile-only"><a href="#">About</a></li>
+					<li class="mobile-only"><a href="#">News & Events</a></li>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Why YSoA</a></li>
 					<li><a href="#">Financial Aid</a></li>
@@ -43,6 +45,8 @@
 					<li><a href="#">Our Work</a></li>
 					<li><a href="#">Contact Us</a></li>
 				</ul>
+					</li>
+        </ul>
       </nav>
     </section>
     <div id="hero">

@@ -77,6 +77,9 @@
 	 .desktop-only {
 		 display: inherit;
 	}
+	.mobile-only {
+		display: none;
+	}
 	 .open-house {
 		 background-image: url("../img/open-house.jpg");
 		 background-size: cover;
