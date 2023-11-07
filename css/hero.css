@@ -1,0 +1,20 @@
+/*hero image*/
+ #hero {
+	 display: flex;
+	 align-items: flex-end;
+	 justify-content: center;
+	 min-height: 600px;
+	 background-image: url("../img/eno-hero.jpg");
+	 background-size: cover;
+}
+ #hero h1 {
+	 background-color: rgba(255, 255, 255, 0.73);
+	 width: 100%;
+	 padding: 20px;
+	 text-align: left;
+}
+
+#hero h2 {
+	 color: white;
+}
+
