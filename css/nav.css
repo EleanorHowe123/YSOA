@@ -1,0 +1,149 @@
+/*navigation*/
+ nav ul {
+	 list-style-type: none;
+}
+ nav li {
+	 text-align: center;
+	 width: 100%;
+}
+ nav a {
+	 text-decoration: none;
+	 line-height: 40px;
+	 color: #00356b;
+}
+
+#hamburger {
+	width: 100px;
+	height: 100px;
+	color: white;
+	position: relative;
+}
+
+/* footer */
+#footer {
+	 display: flex;
+	 flex-direction: column;
+	margin: auto;
+	background: #333;
+	color: white;
+	padding: 20px 0 120px;
+}
+
+#footer ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+#footer ul li {
+	text-align: center;
+	padding: 5px;
+}
+
+#footer a {
+	color: white;
+	line-height: 24px;
+	padding: 8px 12px;
+	transition: background-color 0.3s;
+	border-radius: 5px;
+}
+
+#footer a:hover {
+	background-color: #202020;
+}
+
+/*header*/
+ #header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: linear-gradient(to top, #fff, #004ff9);
+}
+ #header h1 a {
+	 background-image: url("../img/logo-bright.png");
+	 background-size: contain;
+	 background-repeat: no-repeat;
+	 display: block;
+	 height: 100px;
+	 width: 100px;
+	 text-indent: -9999px;
+	 margin: auto;
+}
+#header h1.logo {
+	padding: 0;
+}
+
+#hamburger span {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 50px;
+	min-width: 20px;
+	min-height: 20px;
+}
+
+/* desktop-only styles */
+ @media screen and (min-width: 740px) {
+	 #hamburger {
+		 width: inherit;
+		 height: 100%;
+	 }
+	 #hamburger span {
+		 transform: translateY(-50%);
+	 }
+
+	 #header {
+		 background-color: #00356b;
+	}
+	 #header h1 a {
+		 height: 150px;
+		 width: 150px;
+	}
+	 nav .search {
+		 max-width: 100px;
+		 margin-top: 10px;
+	}
+	 nav {
+		 display: flex;
+		 width: 100%;
+	}
+	nav a {
+		 color: #202d39;
+		 font-size: 15px;
+	}
+	 nav ul {
+		 width: 100%;
+		 display: flex;
+		 flex-direction: row;
+		 align-items: center;
+		 font-size: 15px;
+		 color: white;
+	}
+	 nav li {
+		 height: 100%;
+		 position: relative;
+		text-align: unset;
+	}
+	 nav li a, nav li .search-wrapper, nav li span {
+		 color: white;
+		 font-size: 20px;
+		 position: absolute;
+		 top: 50%;
+		 width: 100%;
+		 text-align: center;
+		 transform: translateY(-50%);
+	}
+	 #footer {
+		height: 200px;
+		padding: 0;
+	}
+	#footer ul {
+		flex-direction: row;
+		list-style-type: none;
+	}
+	#footer ul li {
+		height: 100px;
+		line-height: 100px;
+	}
+}

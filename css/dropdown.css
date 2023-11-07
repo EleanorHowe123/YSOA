@@ -1,0 +1,41 @@
+/* Style the dropdown menu */
+ .dropdown-menu {
+	 display: none;
+	 position: absolute;
+	 width: 100vw;
+	 right: 0;
+	 top: 100px;
+	 background: #0068ff;
+	 z-index: 1;
+	 overflow-y: auto;
+	 white-space: nowrap;
+}
+ .nav-list li:hover {
+	 background-color: #f3b300;
+}
+ .dropdown-menu li {
+	 height: 40px;
+	 width: 100%;
+	 text-align: left;
+	 font-size: 14px;
+	 text-decoration: none;
+}
+ .dropdown-menu li a {
+	 color: #fff;
+	 padding-left: 10px;
+}
+ .dropdown-menu li:hover {
+	 background-color: #f3b300;
+}
+/* When the "show" class is added to the dropdown, display it */
+ .dropdown-menu.show {
+	 display: block;
+}
+
+@media screen and (min-width: 740px) {
+ .dropdown-menu {
+	 top: 150px;
+	 max-height: 380px;
+	 width: 100%;
+ }
+}

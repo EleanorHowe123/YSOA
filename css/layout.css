@@ -1,0 +1,41 @@
+/*responsive framework*/
+
+ .row {
+	 display: flex;
+	 flex-direction: column;
+}
+ .full, .half, .third, .two_thirds, .quarter, .fifth, .sixth {
+	 width: calc(100% - 40px);
+	 display: flex;
+	 align-items: flex-start;
+	 justify-content: flex-start;
+	 flex-direction: column;
+	 padding: 20px;
+}
+
+@media screen and (min-width: 740px) {
+	 .container {
+		 max-width: 1280px;
+		 margin: auto;
+		 background: white;
+	}
+	 .row {
+		 display: flex;
+		 flex-direction: row;
+		 width: 100%;
+		padding: 15px 0;
+		flex-wrap: wrap;
+	}
+	 .full {
+		 width: calc(100% - 40px);
+	}
+	 .half {
+		 width: calc(50% - 40px);
+	}
+	 .third {
+		 width: calc((100% / 3) - 40px);
+	}
+	 .two_thirds {
+		 width: calc((100% / 3 * 2) - 40px);
+	}
+}

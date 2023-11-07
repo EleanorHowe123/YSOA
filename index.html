@@ -21,18 +21,20 @@
       <!--the navigation-->
       <nav class="navbar">
         <ul class="nav-list">
-					<li><a href="#">Academics</a></li>
-					<li><a href="#">Admissions</a></li>
-					<li><a href="#">Student Life</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">News & Events</a></li>
-					<li><input class="search" type="text" value="Search..."></li>
+					<li class="desktop-only"><a href="#">Academics</a></li>
+					<li class="desktop-only"><a href="#">Admissions</a></li>
+					<li class="desktop-only"><a href="#">Student Life</a></li>
+					<li class="desktop-only"><a href="#">About</a></li>
+					<li class="desktop-only"><a href="#">News & Events</a></li>
+					<li class="desktop-only"><div class="search-wrapper"><input class="search" type="text" value="Search..."></div></li>
 					<li id="hamburger" class="nav-item">
-							<span class="hamburger-icon" role="navigation" aria-expanded="false">&#8801;
-							</span>
-					</li>
-        </ul>
+						<span class="hamburger-icon" role="navigation" aria-expanded="false">&#8801;</span>
 				<ul class="dropdown-menu" aria-expanded=true>
+					<li class="mobile-only"><a href="#">Academics</a></li>
+					<li class="mobile-only"><a href="#">Admissions</a></li>
+					<li class="mobile-only"><a href="#">Student Life</a></li>
+					<li class="mobile-only"><a href="#">About</a></li>
+					<li class="mobile-only"><a href="#">News & Events</a></li>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Why YSoA</a></li>
 					<li><a href="#">Financial Aid</a></li>
@@ -43,6 +45,8 @@
 					<li><a href="#">Our Work</a></li>
 					<li><a href="#">Contact Us</a></li>
 				</ul>
+					</li>
+        </ul>
       </nav>
     </section>
     <div id="hero">
@@ -57,7 +61,7 @@
 							<h3>Undergraduate Open House</h3>
 							<p>Prospective students: come one, come all!</p>
 							<p>In-person campus tours</p>
-							<p><a href="#" class="more">Sunday, October 22></a></p>
+							<p><a href="#" class="read-more">Sunday, October 22></a></p>
 						</div>
           </div>
 				</div>
@@ -67,7 +71,7 @@
 						<h3>Contemporary Art Exhibition - Fall Showcase</h3>
 						<p>November 20, 2023<br>6:00 PM - 9:00 PM</p>
 						<p>Nueva Collections Gallery<br>2539 Horvath Ulica, New Haven, Connecticut 33259</p>
-						<button class="call-to-action-button">learn more</button>
+						<a class="call-to-action-button">learn more</a>
           </div>
           <div class="half">
             <img src="img/eight-women.jpg" alt="eight seated women">
@@ -78,24 +82,16 @@
 						<h3>Student Gallery</h3>
 						<div class="slideshow-container">
 							<div class="mySlides fade">
-								<div class="numbertext">1 / 4</div>
 								<img src="img/slider/gator.jpg" alt="gator">
-								<div class="text">Caption Text</div>
 							</div>
 							<div class="mySlides fade">
-								<div class="numbertext">2 / 4</div>
 								<img src="img/slider/fabric.jpg" alt="fabric">
-								<div class="text">Caption Two</div>
 							</div>
 							<div class="mySlides fade">
-								<div class="numbertext">3 / 4</div>
-								<img src="img/slider/pillars.jpg" alt="pillars">
-								<div class="text">Caption Three</div>
+								<img src="img/slider/faces.jpg" alt="faces">
 							</div>
 							<div class="mySlides fade">
-								<div class="numbertext">4 / 3</div>
 								<img src="img/slider/shadow.jpg" alt="shadow">
-								<div class="text">Caption Three</div>
 							</div>
 							<!-- Next and previous buttons -->
 							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -115,7 +111,7 @@
           </div>
 					<div class="third">
             <h4>Eva Hesse</h4>
-            <img class="alumna-img" src="img/alumni/eva.webp" alt="alumna eva h">
+            <img class="alumna-img" src="img/alumni/eva.jpg" alt="alumna eva h">
             <p>Eva Hesse drawing exhibit at Oberlin College shows how her art triumphed over tragedies of a troubled life</p>
             <a href="#" class="more">Read More</a>
           </div>
@@ -161,17 +157,12 @@
 			function showSlides(n) {
 				let i;
 				let slides = document.getElementsByClassName("mySlides");
-				let dots = document.getElementsByClassName("dot");
 				if (n > slides.length) {slideIndex = 1}    
 				if (n < 1) {slideIndex = slides.length}
 				for (i = 0; i < slides.length; i++) {
 					slides[i].style.display = "none";  
 				}
-				for (i = 0; i < dots.length; i++) {
-					dots[i].className = dots[i].className.replace(" active", "");
-				}
 				slides[slideIndex-1].style.display = "block";  
-				dots[slideIndex-1].className += " active";
 			}
 		</script>
     <script>
